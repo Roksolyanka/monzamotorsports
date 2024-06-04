@@ -1,5 +1,6 @@
 @import './normalize.css';
 @import './fonts.css';
+@import './header.css';
 
 :root {
   /* colors */
@@ -51,7 +52,8 @@ body {
   font-family: 'Noto Sans', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
+  background-color: #546358;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -61,7 +63,13 @@ body {
   margin: 0 auto;
 }
 
+.link {
+  text-decoration: none;
+}
 
+.list {
+  list-style: none;
+}
 
 /* ::-webkit-scrollbar {
   width: 10px;
@@ -81,4 +89,4 @@ body {
   background-color: #120c07;
   cursor: pointer;
 } */
- 
+
