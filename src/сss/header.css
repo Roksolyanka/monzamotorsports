@@ -14,7 +14,7 @@ header .icon-link-hover:hover {
 header .nav-link {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 32px;
   line-height: 1.33;
   color: var(--text-color);
 }
@@ -47,6 +47,7 @@ header .nav-link.current {
   }
 
   header .nav-link {
+    font-size: 15px;
     color: var(--background-color);
   }
 
