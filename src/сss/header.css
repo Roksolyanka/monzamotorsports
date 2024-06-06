@@ -5,7 +5,7 @@
   width: 100%;
 }
 
-header .icon-link-hover:hover {
+header .icon-link-hover:hover, header .icon-link-hover:focus {
   --bs-icon-link-transform: translate3d(0, -0.125rem, 0);
   transform: var(--bs-icon-link-transform);
   fill: var(--brand-color);
