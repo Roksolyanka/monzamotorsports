@@ -3,6 +3,7 @@
 @import './header.css';
 @import './hero.css';
 @import './offers-section.css';
+@import './newsletter-section.css';
 
 :root {
   /* colors */
@@ -74,22 +75,3 @@ body {
 .list {
   list-style: none;
 }
-
-/* ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-  display: none;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #ffe724;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #222326;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #120c07;
-  cursor: pointer;
-} */
