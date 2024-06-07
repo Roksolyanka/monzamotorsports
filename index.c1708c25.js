@@ -1,0 +1,2 @@
+(()=>{const e=document.querySelectorAll(".needs-validation");Array.from(e).forEach((e=>{const t=e.querySelector('input[type="email"]'),a=e.querySelector('button[type="submit"]');t.addEventListener("input",(()=>{""!==t.value.trim()?a.removeAttribute("disabled"):a.setAttribute("disabled","disabled")})),e.addEventListener("submit",(t=>{e.checkValidity()||(t.preventDefault(),t.stopPropagation()),e.classList.add("was-validated")}))}))})();
+//# sourceMappingURL=index.c1708c25.js.map
