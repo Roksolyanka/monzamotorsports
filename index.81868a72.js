@@ -1,2 +1,0 @@
-document.addEventListener("DOMContentLoaded",(function(){var e=document.querySelectorAll(".custom-select"),t=document.getElementById("btnFilterCars");e.forEach((function(n){n.addEventListener("change",(function(){var c;n.value?n.classList.add("selected"):n.classList.remove("selected"),c=!1,e.forEach((function(e){""!==e.value&&(c=!0)})),t.disabled=!c}))}))}));
-//# sourceMappingURL=index.81868a72.js.map
