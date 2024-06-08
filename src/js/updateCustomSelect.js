@@ -3,7 +3,9 @@ export function updateCustomSelect(element) {
   let select = selectWrapper.querySelector('.styled-dropdown');
   let optionList = selectWrapper.querySelector('.option-list');
 
-  select.textContent = element.querySelector('option').textContent;
+  select.textContent = element.querySelector(
+    'option[value="' + element.value + '"]'
+  ).textContent;
 
   optionList.innerHTML = '';
 
@@ -21,7 +23,7 @@ export function updateCustomSelect(element) {
       optionList.style.display = 'none';
       select.classList.remove('on');
 
-      let event = new Event('change');
+      let event = new Event('change', { bubbles: true });
       element.dispatchEvent(event);
     });
   });

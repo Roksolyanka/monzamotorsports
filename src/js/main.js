@@ -8,7 +8,7 @@ import { updateCustomSelect } from './updateCustomSelect';
 
 document.addEventListener('DOMContentLoaded', function () {
   let filterItems = document.querySelectorAll('.filter-item select');
-  
+
   initializeCustomSelects();
   initializeModelSelect();
 
