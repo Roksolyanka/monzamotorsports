@@ -4,6 +4,7 @@
 @import './hero.css';
 @import './offers-section.css';
 @import './newsletter-section.css';
+@import './question-section.css';
 
 :root {
   /* colors */
