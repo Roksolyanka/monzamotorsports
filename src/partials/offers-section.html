@@ -5,6 +5,7 @@
       <div class="row select-wrapper">
         <div class="filter-item col">
           <select
+            id="yearSelect"
             class="styled-select custom-select form-select"
             aria-label="Choice of year"
           >
@@ -33,13 +34,11 @@
             aria-label="Choice of make"
           >
             <option value="" selected>Make</option>
-            <option value="Honda">Honda</option>
-            <option value="Kia">Kia</option>
             <option value="Toyota">Toyota</option>
             <option value="Volkswagen">Volkswagen</option>
             <option value="Lexus">Lexus</option>
             <option value="Hyundai">Hyundai</option>
-            <option value="Mercedes">Mercedes-Benz</option>
+            <option value="Mercedes-Benz">Mercedes-Benz</option>
           </select>
         </div>
         <div class="filter-item col">
@@ -54,25 +53,18 @@
         </div>
         <div class="filter-item col">
           <select
+            id="trimSelect"
             class="styled-select custom-select form-select"
             aria-label="Choice of trim"
           >
             <option value="" selected>Trim</option>
-            <option value="Standard">Standard</option>
-            <option value="Sport">Sport</option>
-            <option value="Luxury">Luxury</option>
-            <option value="Premium">Premium</option>
-            <option value="Limited Edition">Limited Edition</option>
-            <option value="Off-Road">Off-Road</option>
-            <option value="Hybrid">Hybrid</option>
-            <option value="Electric">Electric</option>
-            <option value="Performance">Performance</option>
-            <option value="Touring">Touring</option>
-            <option value="Custom">Custom</option>
+            <option value="Gas">Gas</option>
+            <option value="Diesel">Diesel</option>
           </select>
         </div>
         <div class="filter-item col">
           <select
+            id="mileageSelect"
             class="styled-select custom-select form-select ellipsis"
             aria-label="Choice of mileage"
           >
@@ -80,12 +72,12 @@
             <option value="1">less than 30,000 km</option>
             <option value="2">30,000km-40,000km</option>
             <option value="3">40,001km-50,000km</option>
-            <option value="3">50,001km-60,000km</option>
-            <option value="2">60,001km-70,000km</option>
-            <option value="3">70,001km-80,000km</option>
-            <option value="3">80,001km-90,000km</option>
-            <option value="3">90,001km-100,000km</option>
-            <option value="3">more than 100,000km</option>
+            <option value="4">50,001km-60,000km</option>
+            <option value="5">60,001km-70,000km</option>
+            <option value="6">70,001km-80,000km</option>
+            <option value="7">80,001km-90,000km</option>
+            <option value="8">90,001km-100,000km</option>
+            <option value="9">more than 100,000km</option>
           </select>
         </div>
       </div>
@@ -97,7 +89,7 @@
           id="btnFilterCars"
           disabled
         >
-          40 Cars
+          <span id="totalCars"></span> Cars
         </button>
       </div>
     </div>
@@ -125,8 +117,8 @@
         </select>
       </div>
     </div>
-    <div class="row">
-      <!-- Car cards  -->
-    </div>
+    <div
+      class="offers-wrapper-card row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4"
+    ></div>
   </div>
 </section>

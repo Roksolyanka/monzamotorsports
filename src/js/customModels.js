@@ -1,18 +1,9 @@
+import { cars } from './cars';
 import { updateCustomSelect } from './updateCustomSelect';
 import { updateFilterButtonState } from './updateFilterButton';
 
 let makeSelect = document.getElementById('makeSelect');
 let modelSelect = document.getElementById('modelSelect');
-
-const models = {
-  Honda: ['Civic', 'Accord', 'Fit'],
-  Kia: ['Cerato', 'Forte', 'Sportage'],
-  Toyota: ['Highlander', 'Camry', 'Venza'],
-  Volkswagen: ['Tiguan', 'Amarok', 'T-Cross'],
-  Lexus: ['RX', 'NX', 'RC'],
-  Hyundai: ['Elantra', 'Accent', 'Sonata'],
-  Mercedes: ['GLE-Class', 'C-Class', 'E-Class'],
-};
 
 export function initializeModelSelect() {
   makeSelect.addEventListener('change', function () {
@@ -20,8 +11,12 @@ export function initializeModelSelect() {
     modelSelect.innerHTML = '<option value="">Model</option>';
 
     if (selectedMake) {
-      modelSelect.disabled = false;
-      models[selectedMake].forEach(function (model) {
+      const models = [
+        ...new Set(
+          cars.filter(car => car.make === selectedMake).map(car => car.model)
+        ),
+      ];
+      models.forEach(function (model) {
         const option = document.createElement('option');
         option.value = model;
         option.textContent = model;
@@ -35,3 +30,27 @@ export function initializeModelSelect() {
     updateFilterButtonState();
   });
 }
+
+export function updateModelOptions(selectedMake = '') {
+  const modelSelect = document.getElementById('modelSelect');
+  modelSelect.innerHTML = '<option value="" selected>Model</option>';
+
+  if (selectedMake) {
+    const models = [
+      ...new Set(
+        cars.filter(car => car.make === selectedMake).map(car => car.model)
+      ),
+    ];
+    models.forEach(model => {
+      const option = document.createElement('option');
+      option.value = model;
+      option.textContent = model;
+      modelSelect.appendChild(option);
+    });
+    modelSelect.disabled = false;
+  } else {
+    modelSelect.disabled = true;
+  }
+}
+
+
