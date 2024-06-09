@@ -1,4 +1,5 @@
 import { cars } from './cars';
+import defaultImage from '../assets/images/default-img.jpg';
 
 const offersWrapper = document.querySelector('.offers-wrapper-card');
 
@@ -15,15 +16,20 @@ export function createCards(filteredCars = cars) {
       card.dataset.sold = 'false';
     }
 
+    const imgAlt = car.make + ' ' + car.model;
+
+    const imgSrc = car.img?.src || defaultImage;
+    const imgSrcset = car.img?.srcset || '';
+
     card.innerHTML = `
             <div class="position-relative">
                 <img
-                    src="${car.img.src}"
-                    srcset="${car.img.srcset}"
+                    src="${imgSrc}"
+                    srcset="${imgSrcset}"
                     width="295"
                     height="200"
                     class="offers-img-car card-img-top"
-                    alt="Car Image"
+                    alt="${imgAlt}"
                 />
                  ${
                    car.isSold
