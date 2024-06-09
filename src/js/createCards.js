@@ -31,6 +31,11 @@ export function createCards(filteredCars = cars) {
                     class="offers-img-car card-img-top"
                     alt="${imgAlt}"
                 />
+                ${
+                  car.isNew
+                    ? '<span class="offers-new-car new-badge">New</span>'
+                    : ''
+                }
                  ${
                    car.isSold
                      ? '<div class="offers-sold-car-overlay">SOLD</div>'

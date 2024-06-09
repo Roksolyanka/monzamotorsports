@@ -12,11 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterButton = document.getElementById('btnFilterCars');
   const totalCarsSpanBtn = document.getElementById('totalCars');
   const availableCheckbox = document.getElementById('available');
+  const sortSelect = document.getElementById('sortSelect');
 
   totalCarsSpanBtn.textContent = cars.length;
 
-  function filterCars() {
-    let filteredCars = cars;
+  function filterAndSortCars() {
+    let filteredCars = [...cars];
 
     const selectedYear = yearSelect.value;
     const selectedMake = makeSelect.value;
@@ -76,15 +77,54 @@ document.addEventListener('DOMContentLoaded', () => {
       filteredCars = filteredCars.filter(car => !car.isSold);
     }
 
+    const selectedSortOption = sortSelect.value;
+
+    switch (selectedSortOption) {
+      case 'Publication date (ascending)':
+        filteredCars.sort((a, b) => {
+          if (a.isNew && !b.isNew) return -1;
+          if (!a.isNew && b.isNew) return 1;
+          return new Date(b.date) - new Date(a.date);
+        });
+        break;
+      case 'Publication date (descending)':
+        filteredCars.sort((a, b) => {
+          if (a.isNew && !b.isNew) return 1;
+          if (!a.isNew && b.isNew) return -1;
+          return new Date(a.date) - new Date(b.date);
+        });
+        break;
+      case 'Price (ascending)':
+        filteredCars.sort((a, b) => a.price - b.price);
+        break;
+      case 'Price (descending)':
+        filteredCars.sort((a, b) => b.price - a.price);
+        break;
+      case 'Mileage (ascending)':
+        filteredCars.sort((a, b) => a.mileage - b.mileage);
+        break;
+      case 'Mileage (descending)':
+        filteredCars.sort((a, b) => b.mileage - a.mileage);
+        break;
+      case 'Performance (ascending)':
+        filteredCars.sort((a, b) => a.year - b.year);
+        break;
+      case 'Performance (descending)':
+        filteredCars.sort((a, b) => b.year - a.year);
+        break;
+      default:
+        break;
+    }
+
     createCards(filteredCars);
   }
 
-  yearSelect.addEventListener('change', filterCars);
-  makeSelect.addEventListener('change', filterCars);
-  modelSelect.addEventListener('change', filterCars);
-  trimSelect.addEventListener('change', filterCars);
-  mileageSelect.addEventListener('change', filterCars);
-  availableCheckbox.addEventListener('change', filterCars);
+  yearSelect.addEventListener('change', filterAndSortCars);
+  makeSelect.addEventListener('change', filterAndSortCars);
+  modelSelect.addEventListener('change', filterAndSortCars);
+  trimSelect.addEventListener('change', filterAndSortCars);
+  mileageSelect.addEventListener('change', filterAndSortCars);
+  availableCheckbox.addEventListener('change', filterAndSortCars);
 
   filterButton.addEventListener('click', () => {
     yearSelect.value = '';
@@ -94,7 +134,11 @@ document.addEventListener('DOMContentLoaded', () => {
     mileageSelect.value = '';
     availableCheckbox.checked = false;
 
-    filterCars();
+    filterAndSortCars();
     resetCustomSelects();
   });
+
+  sortSelect.addEventListener('change', filterAndSortCars);
+
+  filterAndSortCars();
 });

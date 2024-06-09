@@ -34,4 +34,5 @@ export function resetCustomSelects() {
 
       updateCustomSelectStyle(wrapper, originalSelect.value);
     });
+  updateFilterButtonState();
 }
