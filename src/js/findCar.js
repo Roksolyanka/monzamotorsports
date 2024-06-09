@@ -12,17 +12,20 @@ import {
   initializeCustomSelectSort,
   updateCustomSelectStyleSort,
 } from './customSelectSort';
+import { initializeFilterCards } from './filterCards';
 
 document.addEventListener('DOMContentLoaded', function () {
-  let filterItems = document.querySelectorAll('.filter-item select');
+  let filterItems = document.querySelectorAll('.offers-filter-item select');
 
   initializeCustomSelects();
   initializeModelSelect();
 
-  document.querySelectorAll('.styled-select').forEach(function (element) {
-    updateCustomSelect(element);
-    updateCustomSelectStyle(element.parentNode, element.value);
-  });
+  document
+    .querySelectorAll('.offers-styled-select')
+    .forEach(function (element) {
+      updateCustomSelect(element);
+      updateCustomSelectStyle(element.parentNode, element.value);
+    });
 
   filterItems.forEach(function (filterItem) {
     filterItem.addEventListener('change', function () {
@@ -37,4 +40,5 @@ document.addEventListener('DOMContentLoaded', function () {
       updateCustomSelectStyleSort(element.parentNode, element.value);
     });
   resetCustomSelects();
+  initializeFilterCards();
 });
