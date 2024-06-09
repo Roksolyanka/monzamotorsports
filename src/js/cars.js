@@ -1,3 +1,20 @@
+import volkswagenTiguanImg from '../assets/images/volkswagen-tiguan.jpg';
+import volkswagenTiguanImg2x from '../assets/images/volkswagen-tiguan-2x.jpg';
+import toyotaHlXLEImg from '../assets/images/toyota-highlander-xle.jpg';
+import toyotaHlXLEImg2x from '../assets/images/toyota-highlander-xle-2x.jpg';
+import lexusRXLuxuryImg from '../assets/images/lexus-rx-luxury.jpg';
+import lexusRXLuxuryImg2x from '../assets/images/lexus-rx-luxury-2x.jpg';
+import toyotaHlLEImg from '../assets/images/toyota-highlander-le.jpg';
+import toyotaHlLEImg2x from '../assets/images/toyota-highlander-le-2x.jpg';
+import hyundaiElantraImg from '../assets/images/hyundai-elantra.jpg';
+import hyundaiElantraImg2x from '../assets/images/hyundai-elantra-2x.jpg';
+import mercedesGLEImg from '../assets/images/mercedes-benz.jpg';
+import mercedesGLEImg2x from '../assets/images/mercedes-benz-2x.jpg';
+import toyotaVenzaImg from '../assets/images/toyota-venza.jpg';
+import toyotaVenzaImg2x from '../assets/images/toyota-venza-2x.jpg';
+import lexusRXSportImg from '../assets/images/lexus-rx-fsport.jpg';
+import lexusRXSportImg2x from '../assets/images/lexus-rx-fsport-2x.jpg';
+
 export const cars = [
   {
     make: 'Volkswagen',
@@ -8,9 +25,11 @@ export const cars = [
     fuelType: 'Diesel',
     price: 34888,
     img: {
-      src: '/src/assets/images/volkswagen-tiguan.jpg',
-      srcset:
-        '/src/assets/images/volkswagen-tiguan.jpg 1x, /src/assets/images/volkswagen-tiguan-2x.jpg 2x',
+      src: volkswagenTiguanImg,
+      srcset: `
+        ${volkswagenTiguanImg} 1x,
+        ${volkswagenTiguanImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
@@ -24,9 +43,11 @@ export const cars = [
     fuelType: 'Gas',
     price: 27875,
     img: {
-      src: '/src/assets/images/toyota-highlander-xle.jpg',
-      srcset:
-        '/src/assets/images/toyota-highlander-xle.jpg 1x, /src/assets/images/toyota-highlander-xle-2x.jpg 2x',
+      src: toyotaHlXLEImg,
+      srcset: `
+        ${toyotaHlXLEImg} 1x,
+        ${toyotaHlXLEImg2x} 2x
+      `,
     },
     isNew: true,
     isSold: false,
@@ -40,9 +61,11 @@ export const cars = [
     fuelType: 'Gas',
     price: 38775,
     img: {
-      src: '/src/assets/images/lexus-rx-luxury.jpg',
-      srcset:
-        '/src/assets/images/lexus-rx-luxury.jpg 1x, /src/assets/images/lexus-rx-luxury-2x.jpg 2x',
+      src: lexusRXLuxuryImg,
+      srcset: `
+        ${lexusRXLuxuryImg} 1x,
+        ${lexusRXLuxuryImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
@@ -56,9 +79,11 @@ export const cars = [
     fuelType: 'Gas',
     price: 23728,
     img: {
-      src: '/src/assets/images/toyota-highlander-le.jpg',
-      srcset:
-        '/src/assets/images/toyota-highlander-le.jpg 1x, /src/assets/images/toyota-highlander-le-2x.jpg 2x',
+      src: toyotaHlLEImg,
+      srcset: `
+        ${toyotaHlLEImg} 1x,
+        ${toyotaHlLEImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
@@ -72,9 +97,11 @@ export const cars = [
     fuelType: 'Gas',
     price: 11788,
     img: {
-      src: '/src/assets/images/hyundai-elantra.jpg',
-      srcset:
-        '/src/assets/images/hyundai-elantra.jpg 1x, /src/assets/images/hyundai-elantra-2x.jpg 2x',
+      src: hyundaiElantraImg,
+      srcset: `
+        ${hyundaiElantraImg} 1x,
+        ${hyundaiElantraImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
@@ -88,9 +115,11 @@ export const cars = [
     fuelType: 'Diesel',
     price: 38878,
     img: {
-      src: '/src/assets/images/mercedes-benz.jpg',
-      srcset:
-        '/src/assets/images/mercedes-benz.jpg 1x, /src/assets/images/mercedes-benz-2x.jpg 2x',
+      src: mercedesGLEImg,
+      srcset: `
+        ${mercedesGLEImg} 1x,
+        ${mercedesGLEImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
@@ -104,9 +133,11 @@ export const cars = [
     fuelType: 'Diesel',
     price: 18620,
     img: {
-      src: '/src/assets/images/toyota-venza.jpg',
-      srcset:
-        '/src/assets/images/toyota-venza.jpg 1x, /src/assets/images/toyota-venza-2x.jpg 2x',
+      src: toyotaVenzaImg,
+      srcset: `
+        ${toyotaVenzaImg} 1x,
+        ${toyotaVenzaImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: true,
@@ -120,9 +151,11 @@ export const cars = [
     fuelType: 'Gas',
     price: 34888,
     img: {
-      src: '/src/assets/images/lexus-rx-fsport.jpg',
-      srcset:
-        '/src/assets/images/lexus-rx-fsport.jpg 1x, /src/assets/images/lexus-rx-fsport-2x.jpg 2x',
+      src: lexusRXSportImg,
+      srcset: `
+        ${lexusRXSportImg} 1x,
+        ${lexusRXSportImg2x} 2x
+      `,
     },
     isNew: true,
     isSold: false,
@@ -136,9 +169,11 @@ export const cars = [
     fuelType: 'Diesel',
     price: 34888,
     img: {
-      src: '/src/assets/images/volkswagen-tiguan.jpg',
-      srcset:
-        '/src/assets/images/volkswagen-tiguan.jpg 1x, /src/assets/images/volkswagen-tiguan-2x.jpg 2x',
+      src: volkswagenTiguanImg,
+      srcset: `
+        ${volkswagenTiguanImg} 1x,
+        ${volkswagenTiguanImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
@@ -152,9 +187,11 @@ export const cars = [
     fuelType: 'Gas',
     price: 27875,
     img: {
-      src: '/src/assets/images/toyota-highlander-xle.jpg',
-      srcset:
-        '/src/assets/images/toyota-highlander-xle.jpg 1x, /src/assets/images/toyota-highlander-xle-2x.jpg 2x',
+      src: toyotaHlXLEImg,
+      srcset: `
+        ${toyotaHlXLEImg} 1x,
+        ${toyotaHlXLEImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
@@ -168,9 +205,11 @@ export const cars = [
     fuelType: 'Gas',
     price: 38775,
     img: {
-      src: '/src/assets/images/lexus-rx-luxury.jpg',
-      srcset:
-        '/src/assets/images/lexus-rx-luxury.jpg 1x, /src/assets/images/lexus-rx-luxury-2x.jpg 2x',
+      src: lexusRXLuxuryImg,
+      srcset: `
+        ${lexusRXLuxuryImg} 1x,
+        ${lexusRXLuxuryImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
@@ -184,9 +223,11 @@ export const cars = [
     fuelType: 'Gas',
     price: 23728,
     img: {
-      src: '/src/assets/images/toyota-highlander-le.jpg',
-      srcset:
-        '/src/assets/images/toyota-highlander-le.jpg 1x, /src/assets/images/toyota-highlander-le-2x.jpg 2x',
+      src: toyotaHlLEImg,
+      srcset: `
+        ${toyotaHlLEImg} 1x,
+        ${toyotaHlLEImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
@@ -200,9 +241,11 @@ export const cars = [
     fuelType: 'Diesel',
     price: 34888,
     img: {
-      src: '/src/assets/images/volkswagen-tiguan.jpg',
-      srcset:
-        '/src/assets/images/volkswagen-tiguan.jpg 1x, /src/assets/images/volkswagen-tiguan-2x.jpg 2x',
+      src: volkswagenTiguanImg,
+      srcset: `
+        ${volkswagenTiguanImg} 1x,
+        ${volkswagenTiguanImg2x} 2x
+      `,
     },
     isNew: true,
     isSold: false,
@@ -216,9 +259,11 @@ export const cars = [
     fuelType: 'Gas',
     price: 27875,
     img: {
-      src: '/src/assets/images/toyota-highlander-xle.jpg',
-      srcset:
-        '/src/assets/images/toyota-highlander-xle.jpg 1x, /src/assets/images/toyota-highlander-xle-2x.jpg 2x',
+      src: toyotaHlXLEImg,
+      srcset: `
+        ${toyotaHlXLEImg} 1x,
+        ${toyotaHlXLEImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
@@ -232,9 +277,11 @@ export const cars = [
     fuelType: 'Gas',
     price: 38775,
     img: {
-      src: '/src/assets/images/lexus-rx-luxury.jpg',
-      srcset:
-        '/src/assets/images/lexus-rx-luxury.jpg 1x, /src/assets/images/lexus-rx-luxury-2x.jpg 2x',
+      src: lexusRXLuxuryImg,
+      srcset: `
+        ${lexusRXLuxuryImg} 1x,
+        ${lexusRXLuxuryImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
@@ -248,9 +295,11 @@ export const cars = [
     fuelType: 'Gas',
     price: 23728,
     img: {
-      src: '/src/assets/images/toyota-highlander-le.jpg',
-      srcset:
-        '/src/assets/images/toyota-highlander-le.jpg 1x, /src/assets/images/toyota-highlander-le-2x.jpg 2x',
+      src: toyotaHlLEImg,
+      srcset: `
+        ${toyotaHlLEImg} 1x,
+        ${toyotaHlLEImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
@@ -264,9 +313,11 @@ export const cars = [
     fuelType: 'Gas',
     price: 11788,
     img: {
-      src: '/src/assets/images/hyundai-elantra.jpg',
-      srcset:
-        '/src/assets/images/hyundai-elantra.jpg 1x, /src/assets/images/hyundai-elantra-2x.jpg 2x',
+      src: hyundaiElantraImg,
+      srcset: `
+        ${hyundaiElantraImg} 1x,
+        ${hyundaiElantraImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
@@ -280,9 +331,11 @@ export const cars = [
     fuelType: 'Diesel',
     price: 38878,
     img: {
-      src: '/src/assets/images/mercedes-benz.jpg',
-      srcset:
-        '/src/assets/images/mercedes-benz.jpg 1x, /src/assets/images/mercedes-benz-2x.jpg 2x',
+      src: mercedesGLEImg,
+      srcset: `
+        ${mercedesGLEImg} 1x,
+        ${mercedesGLEImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
@@ -296,9 +349,11 @@ export const cars = [
     fuelType: 'Gas',
     price: 18620,
     img: {
-      src: '/src/assets/images/toyota-venza.jpg',
-      srcset:
-        '/src/assets/images/toyota-venza.jpg 1x, /src/assets/images/toyota-venza-2x.jpg 2x',
+      src: toyotaVenzaImg,
+      srcset: `
+        ${toyotaVenzaImg} 1x,
+        ${toyotaVenzaImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
@@ -312,9 +367,11 @@ export const cars = [
     fuelType: 'Gas',
     price: 34888,
     img: {
-      src: '/src/assets/images/lexus-rx-fsport.jpg',
-      srcset:
-        '/src/assets/images/lexus-rx-fsport.jpg 1x, /src/assets/images/lexus-rx-fsport-2x.jpg 2x',
+      src: lexusRXSportImg,
+      srcset: `
+        ${lexusRXSportImg} 1x,
+        ${lexusRXSportImg2x} 2x
+      `,
     },
     isNew: true,
     isSold: false,
@@ -328,9 +385,11 @@ export const cars = [
     fuelType: 'Diesel',
     price: 34888,
     img: {
-      src: '/src/assets/images/volkswagen-tiguan.jpg',
-      srcset:
-        '/src/assets/images/volkswagen-tiguan.jpg 1x, /src/assets/images/volkswagen-tiguan-2x.jpg 2x',
+      src: volkswagenTiguanImg,
+      srcset: `
+        ${volkswagenTiguanImg} 1x,
+        ${volkswagenTiguanImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
@@ -344,9 +403,11 @@ export const cars = [
     fuelType: 'Gas',
     price: 27875,
     img: {
-      src: '/src/assets/images/toyota-highlander-xle.jpg',
-      srcset:
-        '/src/assets/images/toyota-highlander-xle.jpg 1x, /src/assets/images/toyota-highlander-xle-2x.jpg 2x',
+      src: toyotaHlXLEImg,
+      srcset: `
+        ${toyotaHlXLEImg} 1x,
+        ${toyotaHlXLEImg2x} 2x
+      `,
     },
     isNew: false,
     isSold: false,
