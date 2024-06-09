@@ -1,7 +1,7 @@
 export function updateCustomSelect(element) {
   let selectWrapper = element.parentNode;
-  let select = selectWrapper.querySelector('.styled-dropdown');
-  let optionList = selectWrapper.querySelector('.option-list');
+  let select = selectWrapper.querySelector('.offers-styled-dropdown');
+  let optionList = selectWrapper.querySelector('.offers-option-list');
 
   select.textContent = element.querySelector(
     'option[value="' + element.value + '"]'
@@ -11,7 +11,7 @@ export function updateCustomSelect(element) {
 
   element.querySelectorAll('option').forEach(function (option) {
     let optionItem = document.createElement('div');
-    optionItem.classList.add('option-item');
+    optionItem.classList.add('offers-option-item');
     optionItem.innerHTML = '<span>' + option.textContent + '</span>';
     optionItem.setAttribute('data-value', option.value);
     optionList.appendChild(optionItem);

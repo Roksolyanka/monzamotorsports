@@ -1,7 +1,7 @@
 import { updateCustomSelectStyle } from './customSelect';
 
 export function updateFilterButtonState() {
-  let filterItems = document.querySelectorAll('.filter-item select');
+  let filterItems = document.querySelectorAll('.offers-filter-item select');
   let btnFilterCars = document.getElementById('btnFilterCars');
   let selectedFilter = false;
 
@@ -20,11 +20,11 @@ export function updateFilterButtonState() {
 
 export function resetCustomSelects() {
   document
-    .querySelectorAll('.custom-select-wrapper')
+    .querySelectorAll('.offers-custom-select-wrapper')
     .forEach(function (wrapper) {
-      let originalSelect = wrapper.querySelector('.styled-select');
-      let styledDropdown = wrapper.querySelector('.styled-dropdown');
-      let optionList = wrapper.querySelector('.option-list');
+      let originalSelect = wrapper.querySelector('.offers-styled-select');
+      let styledDropdown = wrapper.querySelector('.offers-styled-dropdown');
+      let optionList = wrapper.querySelector('.offers-option-list');
 
       styledDropdown.classList.remove('on');
       optionList.style.display = 'none';
@@ -35,4 +35,13 @@ export function resetCustomSelects() {
       updateCustomSelectStyle(wrapper, originalSelect.value);
     });
   updateFilterButtonState();
+
+  const modelSelect = document.getElementById('modelSelect');
+  if (modelSelect) {
+    modelSelect.disabled = true;
+    const modelWrapper = modelSelect.closest('.offers-custom-select-wrapper');
+    if (modelWrapper) {
+      modelWrapper.classList.add('disabled');
+    }
+  }
 }

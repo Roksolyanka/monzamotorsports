@@ -3,7 +3,7 @@ import { createCards } from './createCards.js';
 import { updateModelOptions } from './customModels.js';
 import { resetCustomSelects } from './updateFilterButton.js';
 
-document.addEventListener('DOMContentLoaded', () => {
+export function initializeFilterCards() {
   const yearSelect = document.getElementById('yearSelect');
   const makeSelect = document.getElementById('makeSelect');
   const modelSelect = document.getElementById('modelSelect');
@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const totalCarsSpanBtn = document.getElementById('totalCars');
   const availableCheckbox = document.getElementById('available');
   const sortSelect = document.getElementById('sortSelect');
+  const sortIcon = document.getElementById('sortIcon');
 
   totalCarsSpanBtn.textContent = cars.length;
 
@@ -130,6 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     yearSelect.value = '';
     makeSelect.value = '';
     modelSelect.innerHTML = '<option value="" selected>Model</option>';
+    modelSelect.disabled = true;
     trimSelect.value = '';
     mileageSelect.value = '';
     availableCheckbox.checked = false;
@@ -138,7 +140,19 @@ document.addEventListener('DOMContentLoaded', () => {
     resetCustomSelects();
   });
 
-  sortSelect.addEventListener('change', filterAndSortCars);
+  function updateSortIcon(selectedValue) {
+    if (selectedValue.includes('ascending')) {
+      sortIcon.innerHTML = `<svg width="13" height="13" viewBox="0 0 30 30"><path fill="#df4e3c" d="M10.666 0 3.555 7.094h5.334v12.46h3.557V7.094h5.332L10.667 0z" style="fill:var(--color1, #df4e3c)"/><path fill="#8d8d8d" d="M23.111 24.906v-12.46h-3.554v12.46H14.22L21.334 32l7.111-7.094h-5.334z" style="fill:var(--color2, #8d8d8d)"/></svg>`;
+    } else {
+      sortIcon.innerHTML = `<svg width="13" height="13" viewBox="0 0 30 30"><path fill="#8d8d8d" d="M10.666 0 3.555 7.094h5.334v12.46h3.557V7.094h5.332L10.667 0z" style="fill:var(--color2, #8d8d8d)"/><path fill="#df4e3c" d="M23.111 24.906v-12.46h-3.554v12.46H14.22L21.334 32l7.111-7.094h-5.334z" style="fill:var(--color1, #df4e3c)"/></svg>`;
+    }
+  }
+
+  sortSelect.addEventListener('change', event => {
+    const selectedValue = event.target.value;
+    updateSortIcon(selectedValue);
+    filterAndSortCars();
+  });
 
   filterAndSortCars();
-});
+}

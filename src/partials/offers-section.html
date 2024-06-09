@@ -1,12 +1,12 @@
 <section id="offers" class="offers-section">
   <div class="container">
     <h2 class="offers-section-title text-center">Find Your Car</h2>
-    <div class="filter-wrapper d-md-flex justify-content-between">
-      <div class="row select-wrapper">
-        <div class="filter-item col">
+    <div class="offers-filter-wrapper d-md-flex justify-content-between">
+      <div class="offers-select-wrapper row">
+        <div class="offers-filter-item col">
           <select
             id="yearSelect"
-            class="styled-select custom-select form-select"
+            class="offers-styled-select custom-select form-select"
             aria-label="Choice of year"
           >
             <option value="" selected>Year</option>
@@ -27,10 +27,10 @@
             <option value="2024">2024</option>
           </select>
         </div>
-        <div class="filter-item col">
+        <div class="offers-filter-item col">
           <select
             id="makeSelect"
-            class="styled-select custom-select form-select"
+            class="offers-styled-select custom-select form-select"
             aria-label="Choice of make"
           >
             <option value="" selected>Make</option>
@@ -41,20 +41,20 @@
             <option value="Mercedes-Benz">Mercedes-Benz</option>
           </select>
         </div>
-        <div class="filter-item col">
+        <div class="offers-filter-item col">
           <select
             id="modelSelect"
-            class="styled-select custom-select form-select"
+            class="offers-styled-select custom-select form-select"
             aria-label="Choice of model"
             disabled
           >
             <option value="" selected>Model</option>
           </select>
         </div>
-        <div class="filter-item col">
+        <div class="offers-filter-item col">
           <select
             id="trimSelect"
-            class="styled-select custom-select form-select"
+            class="offers-styled-select custom-select form-select"
             aria-label="Choice of trim"
           >
             <option value="" selected>Trim</option>
@@ -62,10 +62,10 @@
             <option value="Diesel">Diesel</option>
           </select>
         </div>
-        <div class="filter-item col">
+        <div class="offers-filter-item col">
           <select
             id="mileageSelect"
-            class="styled-select custom-select form-select ellipsis"
+            class="offers-styled-select custom-select form-select ellipsis"
             aria-label="Choice of mileage"
           >
             <option value="" selected>Mileage</option>
@@ -81,11 +81,11 @@
           </select>
         </div>
       </div>
-      <div class="btn-filter-wrapper filter-item col-md-3">
+      <div class="offers-btn-filter-wrapper offers-filter-item col-md-3">
         <button
           type="button"
-          class="btn btn-filter"
-          alt="Filter out cars"
+          class="offers-btn-filter btn"
+          aria-label="Filter out cars"
           id="btnFilterCars"
           disabled
         >
@@ -93,34 +93,44 @@
         </button>
       </div>
     </div>
-    <div class="wrapper-check-sort d-flex justify-content-between">
+    <div class="offers-wrapper-check-sort d-flex justify-content-between">
       <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="available" />
-        <label class="form-check-label" for="available"
-          >Instantly available vehicles</label
-        >
+        <input
+          class="offers-form-check-input form-check-input"
+          type="checkbox"
+          id="available"
+        />
+        <label class="offers-form-check-label" for="available">
+          Instantly available vehicles
+        </label>
       </div>
-      <div class="wrapper-sort">
-        <label for="sort" class="sort-label">Sort by</label>
-        <svg class="icon-sort" width="13" height="13">
-          <use href="/src/assets/sprite.svg#icon-sort-descending"></use>
+      <div class="offers-wrapper-sort">
+        <label for="sortSelect" class="offers-sort-label">Sort by</label>
+        <svg id="sortIcon" class="icon-sort" width="13" height="13">
+          <use href="/src/assets/sprite.svg#icon-sort-ascending"></use>
         </svg>
         <select id="sortSelect" class="offers-sort-select form-control">
-          <option selected>Publication date (ascending)</option>
-          <option>Publication date (descending)</option>
-          <option>Price (ascending)</option>
-          <option>Price (descending)</option>
-          <option>Mileage (ascending)</option>
-          <option>Mileage (descending)</option>
-          <option>Performance (ascending)</option>
-          <option>Performance (descending)</option>
+          <option value="Publication date (ascending)" selected>
+            Publication date (ascending)
+          </option>
+          <option value="Publication date (descending)">
+            Publication date (descending)
+          </option>
+          <option value="Price (ascending)">Price (ascending)</option>
+          <option value="Price (descending)">Price (descending)</option>
+          <option value="Mileage (ascending)">Mileage (ascending)</option>
+          <option value="Mileage (descending)">Mileage (descending)</option>
+          <option value="Performance (ascending)">
+            Performance (ascending)
+          </option>
+          <option value="Performance (descending)">
+            Performance (descending)
+          </option>
         </select>
       </div>
     </div>
-    <div class="container-fluid">
-      <div
-        class="offers-wrapper-card row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 w-100 mx-0"
-      ></div>
-    </div>
+    <div
+      class="offers-wrapper-card row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 w-100 mx-0"
+    ></div>
   </div>
 </section>
