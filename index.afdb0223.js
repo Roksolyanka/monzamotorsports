@@ -1,2 +1,0 @@
-!function(){"use strict";var t=document.querySelectorAll(".needs-validation");Array.from(t).forEach((function(t){var e=t.querySelector('input[type="email"]'),i=t.querySelector('button[type="submit"]');e.addEventListener("input",(function(){""!==e.value.trim()?i.removeAttribute("disabled"):i.setAttribute("disabled","disabled")})),t.addEventListener("submit",(function(e){t.checkValidity()||(e.preventDefault(),e.stopPropagation()),t.classList.add("was-validated")}))}))}();
-//# sourceMappingURL=index.afdb0223.js.map
